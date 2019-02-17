@@ -1,0 +1,29 @@
+<mvc:View xmlns="sap.m" 
+	xmlns:mvc="sap.ui.core.mvc" controllerName="ui5-seed.controller.Parent" displayBlock="true">
+	<Page id="parentPage">
+		<customHeader>
+			<Bar>
+				<contentRight>
+					<SegmentedButton id="childViewSegmentedButton" select=".onSelect" width="100%">
+						<items>
+							<SegmentedButtonItem key="Module1" text="Child View 1" />
+							<SegmentedButtonItem key="Module2" text="Child View 2" />
+						</items>
+					</SegmentedButton>
+				</contentRight>
+				<contentMiddle>
+					<Title text="Parent View" />
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		<NavContainer id="parentNavContainer">
+		</NavContainer>
+		<footer>
+			<Bar>
+				<contentMiddle>
+					<Title text="Parent footer" />
+				</contentMiddle>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

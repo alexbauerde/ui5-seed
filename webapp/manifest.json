@@ -1,0 +1,106 @@
+{
+  "_version": "1.7.0",
+  "start_url": "index.html",
+  "sap.app": {
+    "id": "ui5-seed",
+    "title": "foo",
+    "type": "application",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "dataSources": {}
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    },
+    "supportedThemes": [
+      "sap_belize_hcb",
+      "sap_belize_hcw",
+      "sap_belize",
+      "sap_belize_plus"
+    ]
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.40.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {}
+      }
+    },
+    "contentDensities": {
+      "compact": false,
+      "cozy": true
+    },
+    "models": {},
+    "rootView": {
+      "id": "rootView",
+      "viewName": "ui5-seed.view.App",
+      "type": "XML",
+      "async": true,
+      "height": "100%",
+      "displayBlock": true
+    },
+    "routing": {
+      "routes": [
+        {
+          "pattern": "",
+          "name": "home",
+          "target": ["parentTarget", "Module1"]
+        },
+        {
+          "pattern": "Module1",
+          "name": "Module1",
+          "target": "Module1"
+        },
+        {
+          "pattern": "Module2",
+          "name": "Module2",
+          "target": "Module2"
+        }
+      ],
+      "targets": {
+        "parentTarget": {
+          "viewName": "Parent",
+          "viewLevel": 1
+        },
+        "Module1": {
+          "viewPath": "ui5-seed.modules.module1",
+          "viewName": "Module",
+          "parent": "parentTarget",
+          "controlId": "parentNavContainer",
+          "controlAggregation": "pages",
+          "viewLevel": 2
+        },
+        "Module2": {
+          "viewPath": "ui5-seed.modules.module2",
+          "viewName": "Module",
+          "parent": "parentTarget",
+          "controlId": "parentNavContainer",
+          "controlAggregation": "pages",
+          "viewLevel": 2
+        },
+        "notFound": {
+          "viewName": "Parent",
+          "transition": "flip",
+          "viewLevel": 0
+        }
+      },
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "ui5-seed.view",
+        "controlId": "myApp",
+        "controlAggregation": "pages",
+        "bypassed": {
+          "target": "notFound"
+        }
+      }
+    }
+  }
+}

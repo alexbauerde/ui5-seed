@@ -1,0 +1,7 @@
+<core:View height="100%" 
+	xmlns:core="sap.ui.core" 
+	xmlns="sap.m" controllerName="ui5-seed.modules.module1.Module">
+	<Page showHeader="false">
+		<Label text="Modul 1 Content" />
+	</Page>
+</core:View>

@@ -1,0 +1,38 @@
+{
+  "name": "ui-seed",
+  "version": "1.0.0",
+  "description": "ui5 seed",
+  "scripts": {
+    "start": "ui5 serve",
+    "lint": "eslint webapp",
+    "clear": "rimraf dist",
+    "build": "rimraf dist && ui5 build self-contained --a && grunt"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openui5/sap.f": "^1.61.2",
+    "@openui5/sap.m": "^1.61.2",
+    "@openui5/sap.tnt": "^1.61.2",
+    "@openui5/sap.ui.commons": "^1.61.2",
+    "@openui5/sap.ui.core": "^1.61.2",
+    "@openui5/sap.ui.layout": "^1.61.2",
+    "@openui5/sap.ui.support": "^1.61.2",
+    "@openui5/sap.ui.table": "^1.61.2",
+    "@openui5/sap.uxap": "^1.61.2",
+    "@openui5/themelib_sap_belize": "^1.61.2",
+    "grunt-run": "^0.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "grunt": "^1.0.3",
+    "grunt-cleanempty": "^1.0.4",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-jshint": "^2.0.0",
+    "grunt-nwabap-ui5uploader": "^0.3.3",
+    "grunt-prompt": "^1.3.3",
+    "rimraf": "^2.6.2",
+    "time-grunt": "^2.0.0"
+  }
+}
