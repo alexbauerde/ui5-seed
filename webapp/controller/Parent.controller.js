@@ -1,12 +1,11 @@
-sap.ui.define(["sap/ui/core/mvc/Controller"], function(Controller) {
+sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
   "use strict";
 
   return Controller.extend("ui5-seed.controller.Parent", {
-    onInit: function() {
+    onInit: function () {
       this.router = this.getOwnerComponent().getRouter();
-      this.getView().addEventDelegate(
-        {
-          onAfterShow: function(event) {
+      this.getView().addEventDelegate({
+          onAfterShow: function (event) {
             this.router.navTo("Module1");
           }
         },
@@ -17,13 +16,13 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function(Controller) {
       );
     },
 
-    onRoutePatternMatched: function(event) {
+    onRoutePatternMatched: function (event) {
       this.byId("childViewSegmentedButton").setSelectedKey(
         event.getParameter("name")
       );
     },
 
-    onSelect: function(event) {
+    onSelect: function (event) {
       this.router.navTo(event.getParameter("key"));
     }
   });

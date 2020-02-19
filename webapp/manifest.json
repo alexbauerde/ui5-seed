@@ -46,8 +46,7 @@
       "displayBlock": true
     },
     "routing": {
-      "routes": [
-        {
+      "routes": [{
           "pattern": "",
           "name": "home",
           "target": ["parentTarget", "Module1"]
